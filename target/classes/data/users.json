@@ -1,0 +1,24 @@
+[
+  {
+    "firstName": "Jeff",
+    "lastName": "Goldblum",
+    "userPassword": "Password",
+    "userName": "jeffgoldblum",
+    "uuid": "a33ee879-5dab-42db-8fa8-2a1ff24f6713"
+  },
+  {
+    "firstName": "Atticus",
+    "lastName": "Finch",
+    "userPassword": "CleverPassword",
+    "userName": "atticusfinch",
+    "uuid": "b6621b77-2dd8-405f-9b50-0f7ec5869eb3"
+  },
+  {
+    "firstName": "Atticus",
+    "lastName": "Madden",
+    "userPassword": "SuperCleverPassword",
+    "userName": "atticusmadden",
+    "uuid": "05d05e62-1e9d-41c2-ac4a-94ababa3388f"
+  }
+
+]

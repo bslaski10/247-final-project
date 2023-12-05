@@ -1,0 +1,51 @@
+[
+    {
+        "project": {
+            "name": "project1",
+            "id": "0012aa35-17de-415a-bb28-57f61b599566",
+            "comment": "Make sure to revise any spelling mistakes.",
+            "owner": "cyruszheng",
+            "members": "abisatti, bslaski10, tp0113"
+        },
+        "columns": [
+            {
+                "name": "To Do",
+                "tasks": [
+                    {
+                        "name": "Task 1",
+                        "description": "Description for Task 1",
+                        "creator": {
+                            "username": "cyruszheng"
+                        },
+                        "dueDate": "10-15-2023",
+                        "priority": "HIGH"
+                    },
+                    {
+                        "name": "Task 2",
+                        "description": "Description for Task 2",
+                        "creator": {
+                            "username": "abisatti"
+                        },
+                        "dueDate": "10-15-2023",
+                        "priority": "MEDIUM"
+                    }
+                ]
+            }
+        ],
+        "comments": [
+            {
+                "user": "cyruszheng",
+                "userInput": "This is the first comment.",
+                "date": "10-13-2023",
+                "replies": [
+                    {
+                        "user": "abisatti",
+                        "userInput": "This is a reply to the first comment.",
+                        "date": "10-14-2023",
+                        "replies": []
+                    }
+                ]
+            }
+        ]
+    }
+]
