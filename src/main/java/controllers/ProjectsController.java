@@ -3,14 +3,16 @@ package controllers;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 
 public class LoginController {
 
     @FXML
-    private Button btnSignUp;
+    private Button btnAddProject;
+
+    @FXML
+    private Button btnSignOut;
 
     @FXML
     private Label lbl_error;
@@ -19,15 +21,7 @@ public class LoginController {
     private AnchorPane login_pane;
 
     @FXML
-    private TextField txt_password;
-
-    @FXML
-    private TextField txt_username;
-
-    @FXML
-    void back(MouseEvent event) {
-
-    }
+    private Label whitetxt;
 
     @FXML
     void btnLoginClicked(MouseEvent event) {

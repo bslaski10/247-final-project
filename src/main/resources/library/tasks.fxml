@@ -9,19 +9,15 @@
 
 <AnchorPane id="AnchorPane" fx:id="login_pane" prefHeight="631.0" prefWidth="399.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoginController">
    <children>
-      <Label layoutX="158.0" layoutY="145.0" text="Projects:" />
+      <Label layoutX="158.0" layoutY="145.0" />
       <Label fx:id="lbl_error" layoutX="212.0" layoutY="235.0" prefHeight="16.0" prefWidth="170.0" />
-      <Button fx:id="btnSignOut" layoutX="14.0" layoutY="586.0" mnemonicParsing="false" onMouseClicked="#btnLoginClicked" prefHeight="30.0" prefWidth="83.0" text="Sign-Out">
-         <font>
-            <Font size="14.0" />
-         </font></Button>
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="132.0" stroke="BLACK" strokeType="INSIDE" width="402.0" />
-      <Label fx:id="whitetxt" layoutX="74.0" layoutY="14.0" text="WELCOME" textFill="WHITE">
+      <Label fx:id="whitetxt" layoutX="74.0" layoutY="14.0" textFill="WHITE">
          <font>
             <Font name="System Bold" size="51.0" />
          </font>
       </Label>
-      <Button fx:id="btnAddProject" layoutX="135.0" layoutY="513.0" mnemonicParsing="false" onMouseClicked="#btnLoginClicked" prefHeight="38.0" prefWidth="131.0" text="+ Add Project">
+      <Button fx:id="btnAddTask" layoutX="135.0" layoutY="513.0" mnemonicParsing="false" onMouseClicked="#btnLoginClicked" prefHeight="38.0" prefWidth="131.0" text="+ Add Task">
          <font>
             <Font size="16.0" />
          </font>
