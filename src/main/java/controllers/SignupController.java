@@ -6,7 +6,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 
-public class LoginController {
+public class SignupController {
 
     @FXML
     private Label lbl_error;

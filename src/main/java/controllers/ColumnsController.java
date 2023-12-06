@@ -6,7 +6,7 @@ import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 
-public class LoginController {
+public class ColumnsController {
 
     @FXML
     private Button btnEditColumn;
