@@ -9,3 +9,8 @@
     -fx-background-color: black; 
     -fx-text-fill: white; 
  }
+
+ #btnSignUp {
+    -fx-background-color: rgb(105, 0, 0);
+    -fx-text-fill: white;
+}
