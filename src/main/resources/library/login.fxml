@@ -21,7 +21,7 @@
       <TextField fx:id="txt_password" layoutX="67.0" layoutY="293.0" />
       <Label fx:id="lbl_error" layoutX="212.0" layoutY="235.0" prefHeight="16.0" prefWidth="170.0" />
       <Button layoutX="14.0" layoutY="12.0" mnemonicParsing="false" onMouseClicked="#back" text="back" />
-      <Button layoutX="112.0" layoutY="438.0" mnemonicParsing="false" onMouseClicked="#btnLoginClicked" prefHeight="24.0" prefWidth="173.0" text="Sign-Up" />
+      <Button fx:id="btnSignUp" layoutX="112.0" layoutY="438.0" mnemonicParsing="false" onMouseClicked="#btnLoginClicked" prefHeight="24.0" prefWidth="173.0" text="Sign-Up" />
    </children>
    <stylesheets>
       <URL value="@styles.css" />
