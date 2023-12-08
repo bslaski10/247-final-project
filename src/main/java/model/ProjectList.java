@@ -1,3 +1,5 @@
+package model;
+
 import java.util.ArrayList;
 import java.util.UUID;
 
@@ -12,7 +14,8 @@ public class ProjectList {
      * Constructor for ProjectList class.
      */
     public ProjectList() {
-        projects = DataLoader.getProjects(); // Load projects data from the data source
+        projects = Database.getProjects(); // Load projects data from the data source
+        System.out.println("Project list size " + projects.size());
     }
 
     /**

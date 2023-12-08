@@ -1,58 +1,61 @@
- import java.util.ArrayList;
+package model;
+
+import java.util.ArrayList;
+import java.util.UUID;
 
 public class Facade {
-    private User user;
-    private Task task;
-    private Project project;
+    private ProjectList project;
+    private Users users;
+    private User currentUser;
+    private static Facade facade;
 
-    public User login(String userName, String password) {
-        user = UserDatabase.getInstance().getUser(userName,password);
-        return user;
+    private Facade() {
+        project = ProjectList.getInstance();
+        users = Users.getInstance();
     }
 
-    public Boolean signUp(String firstName, String LastName, String userName, String password) 
-    {
-        return UserDatabase.getInstance().add(firstName, LastName, userName, password);
+    public static Facade getInstance() {
+        if (facade == null) {
+            facade = new Facade();
+        }
 
+        return facade;
     }
 
-    public Boolean addTask(String taskName, String title, User admin)
-    {
-        return TaskList.getInstance().add(taskName, title, admin);
+    public boolean createAccount(String userName, String password, String firstName, String lastName) {
+        return users.addUser(userName, password, firstName, lastName);
     }
 
-    public Task getTask(String taskName)
-    {
-        task = TaskList.getInstance().getTask(taskName);
-        return task;
+    public boolean login(String userName, String password) {
+        if (!users.haveUser(userName, password)) return false;
+
+        User user = users.getUser(userName, password);
+
+        if (user != null && user.getPassword().equals(password)) {
+            currentUser = user;
+            return true;
+        }
+
+        return false;
     }
 
-    public ArrayList<Task> getTasks()
-    {
-        return TaskList.getInstance().getTasks();
-    }
-
-    public User getUser()
-    {
-        return user;
-    }
-
-    public User getUserbyName(String firstName, String lastName){
-        
-        return user= UserDatabase.getInstance().getUserbyName(firstName,lastName);
+    public User getCurrentUser() {
+        return currentUser;
     }
 
     public Project getProject(String name) {
-        project = ProjectList.getInstance().getProject(name);
-        return project;
-
+        return project.getProject(name);
     }
 
-    public ArrayList<Project> getAllProjects() {
-        return ProjectList.getInstance().getAllProjects();
+    public Project getProject(UUID projectID) {
+        return project.getProject(projectID);
     }
 
-    public void addCommentProject(Project project) {
+    public ArrayList<Project> getProjectList() {
+        return project.getAllProjects();
+    }
 
+    public void logout() {
+        users.saveUsers();
     }
 }

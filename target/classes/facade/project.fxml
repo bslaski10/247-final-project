@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" maxHeight="631.0" maxWidth="399.0" minHeight="631.0" minWidth="399.0" prefHeight="631.0" prefWidth="399.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ProjectController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="131.0" layoutY="-5.0" stroke="BLACK" strokeType="INSIDE" width="399.0" />
+      <Label fx:id="lbl_title" alignment="TOP_CENTER" contentDisplay="TOP" layoutX="10.0" layoutY="11.0" prefHeight="108.0" prefWidth="384.0" text="Welcome" textAlignment="CENTER" textOverrun="CENTER_WORD_ELLIPSIS">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <Text layoutX="125.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PROJECTS:">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Text>
+      <VBox id="projectList" fx:id="projectList" alignment="CENTER" layoutX="59.0" layoutY="207.0" prefHeight="217.0" prefWidth="281.0" spacing="10.0" stylesheets="@styles.css" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="56.0" layoutX="99.0" layoutY="509.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+      <Text fill="WHITE" layoutX="130.0" layoutY="545.0" strokeType="OUTSIDE" strokeWidth="0.0" text="+ Add Project" textAlignment="CENTER" wrappingWidth="136.571044921875">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#641013" height="27.0" layoutX="14.0" layoutY="595.0" onMouseClicked="#onSignOut" stroke="BLACK" strokeType="INSIDE" width="72.0" />
+      <Text fill="WHITE" layoutX="22.0" layoutY="614.0" onMouseClicked="#onSignOut" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign Out" wrappingWidth="56.80002441406259">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      
+   </children>
+   <stylesheets>
+      <URL value="@styles.css" />
+   </stylesheets>
+</AnchorPane>

@@ -1,37 +1,48 @@
 package controllers;
 
+import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
+
+import facade.App;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.AnchorPane;
+import model.*;
 
-public class LoginController {
+public class LoginController implements Initializable {
 
     @FXML
-    private Button btnSignUp;
-
+    private TextField txt_username;
+    @FXML
+    private TextField txt_password;
     @FXML
     private Label lbl_error;
 
     @FXML
-    private AnchorPane login_pane;
+    private void btnLoginClicked(MouseEvent event) throws IOException {
+        String enteredUsername = txt_username.getText();
+        String enteredPassword = txt_password.getText();
 
-    @FXML
-    private TextField txt_password;
+        Facade facade = Facade.getInstance();
 
-    @FXML
-    private TextField txt_username;
+        if (!facade.login(enteredUsername, enteredPassword)) {
+            lbl_error.setText("Username/Password is Incorrect");
+            return;
+        }
 
-    @FXML
-    void back(MouseEvent event) {
-
+        App.setRoot("project");
     }
 
     @FXML
-    void btnLoginClicked(MouseEvent event) {
-
+    private void onSignupClicked(ActionEvent event) throws IOException {
+        App.setRoot("signup");
     }
 
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+    }
 }

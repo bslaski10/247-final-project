@@ -1,65 +1,64 @@
+package model;
+
 import java.util.ArrayList;
 
 public class Users {
-	private static Users instance;
+	private static Users users;
 	private ArrayList<User> userList;
 	
 	private Users() {
-		userList = DataLoader.getUsers();
+		userList = Database.getUsers();
 	}
 	
 	public static Users getInstance() {
-		if(instance == null) {
-			instance = new Users();
+		if(users == null) {
+			users = new Users();
 		}
 		
-		return instance;
+		return users;
 	}
 
-	public boolean haveUser(String userName) {
+	public boolean haveUser(String userName, String password) {
 		for(User user : userList) {
-			if(user.getUsername().equals(userName)) {
+			if(user.getUserName().equals(userName)) {
+				return true;
+			}
+			if(user.getPassword().equals(password)) {
 				return true;
 			}
 		}
+		
 		return false;
 	}
 	
-	public User getUser(String userName) {
+	public User getUser(String userName, String password) {
 		for(User user : userList) {
-			if(user.getUsername().equals(userName)) {
+			if(user.getUserName().equals(userName)) {
+				return user;
+			}
+			if(user.getPassword().equals(password)) {
 				return user;
 			}
 		}
 		
 		return null;
 	}
+
+	
 	
 	public ArrayList<User> getUsers() {
 		return userList;
 	}
 	
-	public boolean addUser(String username, String password, String firstName, String lastName) {
-		if(haveUser(username))return false;
+	public boolean addUser(String userName, String password, String firstName, String lastName) {
+		if(haveUser(userName, password))return false;
 		
-		userList.add(new User(username, password, firstName, lastName));
+		userList.add(new User(userName, password, firstName, lastName));
 		return true;
-	}
 
-	public User checkUser(String username, String password) {
-        for (User user : userList) {
-            if (username.equals(user.getUsername())) {
-                if (password.equals(user.getPassword())) {
-                    return user;
-                } else {
-                    return null;
-                }
-            }
-        }
-        return null;
-    }
+	}
 	
 	public void saveUsers() {
-		DataWriter.saveUsers();
+		Database.saveUsers();
 	}
 }

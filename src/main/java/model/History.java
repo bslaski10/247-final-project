@@ -1,3 +1,5 @@
+package model;
+
 class History {
     private String change;
     private String date;

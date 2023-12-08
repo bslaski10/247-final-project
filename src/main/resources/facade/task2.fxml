@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" maxHeight="631.0" maxWidth="399.0" minHeight="631.0" minWidth="399.0" prefHeight="631.0" prefWidth="399.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ColumnController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="131.0" layoutY="-5.0" stroke="BLACK" strokeType="INSIDE" width="399.0" />
+      <Label fx:id="lbl_title" alignment="TOP_CENTER" contentDisplay="TOP" layoutX="126.0" layoutY="37.0" prefHeight="47.0" prefWidth="145.0" text="COLUMN" textAlignment="CENTER" textOverrun="CENTER_WORD_ELLIPSIS">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <VBox id="projectList" fx:id="projectList" alignment="CENTER" layoutX="58.0" layoutY="463.0" prefHeight="217.0" prefWidth="281.0" spacing="10.0" stylesheets="@styles.css" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="56.0" layoutX="99.0" layoutY="288.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+      <Text fill="WHITE" layoutX="126.0" layoutY="323.0" strokeType="OUTSIDE" strokeWidth="0.0" text="+ Add Task" textAlignment="CENTER" wrappingWidth="145.37103271484375">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#641013" height="27.0" layoutX="14.0" layoutY="595.0" onMouseClicked="#toColumn" stroke="BLACK" strokeType="INSIDE" width="72.0" />
+      <Text fill="WHITE" layoutX="29.0" layoutY="616.0" onMouseClicked="#toColumn" strokeType="OUTSIDE" strokeWidth="0.0" text="Back" wrappingWidth="42.40000381469736">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <Text layoutX="53.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="There is nothing in this column">
+         <font>
+            <Font name="System Italic" size="22.0" />
+         </font>
+      </Text>
+      
+   </children>
+   <stylesheets>
+      <URL value="@styles.css" />
+   </stylesheets>
+</AnchorPane>

@@ -1,0 +1,40 @@
+.root{
+    -fx-font-size: 16pt;
+    -fx-font-family: "Arial";
+    -fx-base: white;
+    -fx-background: white;
+}
+
+.button { 
+    -fx-background-color: black; 
+    -fx-text-fill: white; 
+ }
+
+ #btnSignUp {
+    -fx-background-color: rgb(105, 0, 0);
+    -fx-text-fill: white;
+}
+
+#whitetxt{
+    -fx-text-fill: white;
+}
+
+#lbl_title{
+    -fx-text-fill: white;
+}
+
+
+#projectList Label {
+    -fx-font-family: "Helvetica";
+    -fx-text-fill: rgb(255, 255, 255); /* White text */
+    -fx-font-size: 30px; /* Font size for project labels */
+    -fx-background-color: rgb(105, 0, 0); /* Dark red box */
+    -fx-padding: 10px; /* Padding around each project box */
+    -fx-spacing: 15px; /* Spacing between each project box */
+    -fx-min-width: 250px; /* Minimum width for project boxes */
+    -fx-min-height: 70px; /* Minimum height for project boxes */
+    -fx-alignment: center; /* Center text in project boxes */
+    -fx-alignment: center;
+}
+
+
